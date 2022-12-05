@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +34,14 @@ public class User {
     @Column(length = 6, nullable = false)
     private String gymAccessPassword;
 
+
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "tab_user_roles", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role_id")
     private List<String> roles = new ArrayList<>();
+
+    private LocalDateTime creationDate = LocalDateTime.now();
+
+    @Column(length = 100, nullable = false)
+    private String email;
 }

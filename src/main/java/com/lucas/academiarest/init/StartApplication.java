@@ -24,6 +24,7 @@ public class StartApplication implements CommandLineRunner {
             user.setPassword("admin");
             user.getRoles().add("ADMIN");
             user.setGymAccessPassword("1234");
+            user.setEmail("admin@admin.com");
             repository.save(user);
         }
     }

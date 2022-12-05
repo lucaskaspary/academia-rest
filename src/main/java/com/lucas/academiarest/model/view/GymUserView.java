@@ -26,5 +26,7 @@ public class GymUserView {
 
     private LocalDate birthday;
 
+    private String email;
+
     private List<Evaluation> evaluations;
 }

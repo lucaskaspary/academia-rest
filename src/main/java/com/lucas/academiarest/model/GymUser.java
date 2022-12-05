@@ -20,7 +20,7 @@ import java.util.List;
 public class GymUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @OneToOne(fetch = FetchType.EAGER)
     @JsonIgnore

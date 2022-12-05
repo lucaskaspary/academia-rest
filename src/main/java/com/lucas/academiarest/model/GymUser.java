@@ -35,7 +35,7 @@ public class GymUser {
 
     private LocalDate birthday;
 
-    @OneToMany(mappedBy = "gym_user", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "gymUser", fetch = FetchType.LAZY)
     @JsonIgnore
     private List<Evaluation> evaluations;
 

@@ -18,7 +18,7 @@ public class Evaluation {
     private Long id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    private GymUser gym_user;
+    private GymUser gymUser;
 
     private double weight;
 

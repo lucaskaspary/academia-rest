@@ -51,8 +51,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests((authz) -> authz
                         .requestMatchers("/login").permitAll()
                         .requestMatchers("/gymUser").hasAnyRole("USER","ADMIN")
-                        .requestMatchers("/user").permitAll()
-                        .requestMatchers("/admin").hasRole("ADMIN")
+                        .requestMatchers("/user").hasRole("ADMIN")
                         .requestMatchers(SWAGGER_WHITELIST).permitAll()
                         .anyRequest().authenticated()
                 )
